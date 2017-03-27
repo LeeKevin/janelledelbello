@@ -6,11 +6,23 @@ $fa-font-path: "fonts/";
   box-sizing: border-box;
 }
 
+$main-color: #80BBCF;
+
+html {
+  height: 100%;
+  position: relative;
+}
+
 html, body {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 15px;
   margin: 0;
   padding: 0;
+}
+
+body {
+  border: 4px solid $main-color;
+  min-height: 100%;
 }
 
 a {
@@ -19,92 +31,24 @@ a {
   transition: color .3s;
 
   &:hover {
-    color: #d32626;
+    color: $main-color;
   }
 }
 
-header {
-  display: block;
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 30%;
-  max-width: 300px;
-  border-right: 1px solid transparent;
-  text-align: center;
-  overflow: hidden;
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 15%;
-    bottom: 15%;
-    right: 0;
-    width: 1px;
-    background: linear-gradient(to bottom,
-            rgba(227, 224, 216, 0) 0,
-            #e3e0d8 20%, #e3e0d8 80%,
-            rgba(227, 224, 216, 0) 100%
-    );
-  }
-
-  section {
-    position: absolute;
-    width: 170px;
-    left: 50%;
-    top: 50%;
-    text-align: center;
-    margin-top: -100px;
-    margin-left: -85px;
-    transition: all .5s;
-
-    h1 {
-      text-transform: uppercase;
-      font-weight: 700;
-      font-size: 16px;
-      margin: 0 0 4px 0;
-      color: #000;
-    }
-
-    h3 {
-      color: #a19c91;
-      color: #423f37;
-      font-weight: normal;
-      font-size: 13px;
-      margin: 0 0 14px 0;
-    }
-
-    .media {
-      font-size: 25px;
-      display: inline-block;
-      text-align: center;
-
-      a {
-        &:hover {
-          color: #000;
-        }
-
-        + a {
-          margin-left: 4px;
-        }
-      }
-    }
-
-    .resume-link {
-      font-size: 14px;
-      margin-top: 8px;
-      font-weight: 700;
-    }
-  }
+h1 {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 16px;
+  margin: 0 0 4px 0;
+  color: #000;
 }
 
-article.content {
-  position: relative;
-  margin: 0 0 0 30%;
-  padding: 50px 24px 0;
-  width: 70%;
-  overflow: hidden;
+blockquote > p {
+  margin: 0;
+}
+
+article {
+  padding: 32px 0;
 
   h4 {
     font-size: 24px;
@@ -114,7 +58,7 @@ article.content {
   blockquote {
     margin: 8px 0;
     padding: 4px 0 4px 16px;
-    border-left: 8px solid #d32626;
+    border-left: 8px solid $main-color;
   }
 
   h5 {
@@ -124,100 +68,44 @@ article.content {
   section + section {
     margin-top: 40px;
   }
-}
 
-.portfolio-item {
-  padding: 24px;
-  text-align: center;
-  cursor: pointer;
-  transition: .3s all;
-
-  &:hover {
-    opacity: .7;
-  }
-
-  span.name {
-    text-transform: uppercase;
-    color: #FFF;
-    font-weight: 700;
-    font-size: 24px;
+  p {
+    line-height: 1.5;
+    font-size: 18px;
+    color: #4D4D4D;
+    font-weight: 300;
   }
 }
 
-.articles-container {
-  columns: 2 230px;
-  column-gap: 40px;
-
-  > div {
-    margin: 0 0 16px;
-    display: inline-block;
-    width: 100%;
-  }
-
-  li {
-    list-style: none;
-     a.new {
-       &::after{
-         content: ' - new!';
-         color: #d32626;
-         font-size: 13px;
-       }
-     }
-  }
-
-  h5 {
-    font-size: 16px;
-    font-weight: 700;
-    margin: 8px 0;
+article.content {
+  position: relative;
+  margin: 0 0 0 30%;
+  padding: 50px 24px 0;
+  width: 70%;
+  overflow: hidden;
+  min-height: 500px;
+  p {
+    font-size: 15px;
   }
 }
 
 @media(max-width: 770px),
 print {
-  header {
-    position: static;
-    width: auto;
-    padding: 15px;
-
-    &::after {
-      right: -1px;
-    }
-
-    section {
-      position: static;
-      left: auto;
-      top: auto;
-      width: auto;
-      margin: 0;
-      text-align: left;
-
-      h3 {
-        font-size: 15px;
-      }
-
-      .media {
-        position: static;
-        left: auto;
-        top: auto;
-        width: auto;
-        margin: 0;
-        text-align: left;
-      }
-    }
-  }
-
   article.content {
     position: static;
     margin: 0;
     padding: 0 15px 15px 15px;
-  }
-
-  .articles-container {
-    columns: 1;
-
-    > div {
-      margin-left: 0;
-      margin-right: 0;
-    }
+    width: 100%;
   }
 }
+
+@media(min-width: 1000px) {
+  article.content {
+    margin-left: 300px;
+  }
+}
+
+@import "partials/header";
+@import "partials/index";
+@import "partials/portfolio";
+@import "partials/blog";

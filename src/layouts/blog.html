@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{#if page}}Page {{page}}{{else}}Blog{{/if}} - {{ site.name }}</title>
+
+    <meta name="description" content="{{ description }}"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
+    <!-- inject:css -->
+    <!-- endinject -->
+</head>
+<body>
+<div id="blog-header">
+    <a href="/">
+        <div class="home"></div>
+    </a>
+    <div class="blog-logo">
+        <div class="logo"></div>
+        <h1>{{site.name}}</h1>
+        <h3>{{site.tagline}}</h3>
+        <div>
+            <a class="button" title="Email" href="mailto:{{email}}">email</a>
+            <a class="button" title="LinkedIn" href="{{linkedin}}">linkedIn</a>
+            <a class="button" title="janelledelbello.com" href="/">janelledelbello.com</a>
+        </div>
+        <div style="margin-top: 24px; font-size: 18px; font-weight: 700;">
+            {{#if page}}
+            Page {{page}}
+            {{/if}}
+        </div>
+    </div>
+</div>
+<div class="article-container">
+    {{#each (limit articles pagination.limit pagination.start) }}
+    <article class="blog">
+        <div class="date">{{parseDate date}}</div>
+        <a href="/blog/{{path}}"><h2 class="title">{{title}}</h2></a>
+        {{{htmlBlurb plainContents 150}}}
+        <a class="button read-more" title="Read more..." href="/blog/{{path}}">Read more</a>
+    </article>
+    <hr>
+    {{/each}}
+    <div class="next-prev">
+        <div class="prev">
+            {{#if pagination.prev}}
+            <a class="button" href="/{{pagination.prev.path}}">&larr; Prev</a>
+            {{/if}}
+        </div>
+        <div class="next">
+            {{#if pagination.next}}
+            <a class="button" href="/{{pagination.next.path}}">Next &rarr;</a>
+            {{/if}}
+        </div>
+    </div>
+</div>
+<footer class="blog">
+    {{>bar}}
+</footer>
+
+<!-- inject:js -->
+<!-- endinject -->
+</body>
+</html>

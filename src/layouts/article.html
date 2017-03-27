@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{{ title }} - {{ site.name }}</title>
+    <meta name="description" content="{{ description }}"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
+    <!-- inject:css -->
+    <!-- endinject -->
+</head>
+<body>
+{{>bar}}
+<div class="article-container">
+    <article class="blog">
+        <div class="date">
+            {{parseDate date}}
+        </div>
+        <h2 class="title">{{title}}</h2>
+        {{{ contents }}}
+    </article>
+    <hr>
+    <div class="next-prev">
+        <div class="prev">
+            {{#if previous}}
+            <a class="button" href="/blog/{{previous.path}}">&larr; {{previous.title}}</a>
+            {{/if}}
+        </div>
+        {{#if isPortfolio}}
+        <div>
+            <a class="button" href="/portfolio">More from <b>Portfolio</b> <i class="fa fa-level-up"></i>&nbsp;</a>
+        </div>
+        {{/if}}
+        <div class="next">
+            {{#if next}}
+            <a class="button" href="/blog/{{next.path}}">{{next.title}} &rarr;</a>
+            {{/if}}
+        </div>
+    </div>
+</div>
+<footer class="blog">
+    {{>bar}}
+</footer>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ site.name }}</title>
+
+    <meta name="description" content="{{ description }}"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+    <!-- inject:css -->
+    <!-- endinject -->
+</head>
+<body>
+{{> header}}
+<article class="content">
+    <section>
+        {{{contents}}}
+    </section>
+    <section>
+        <h4>Articles</h4>
+
+        <div class="articles-container">
+            <div>
+                <h5>Latest Articles</h5>
+
+                {{#if latest.length}}
+                {{#each latest }}
+                <li>
+                    <a class="{{#if new}}new{{/if}}" href="blog/{{ path }}">{{ title }}</a>
+                </li>
+                {{/each}}
+                {{else}}
+                None
+                {{/if}}
+            </div>
+            {{#if technical.length}}
+            <div>
+                <h5>Technical Writing</h5>
+
+                {{#each technical }}
+                <li>
+                    <a class="{{#if new}}new{{/if}}" href="blog/{{ path }}">{{ title }}</a>
+                </li>
+                {{/each}}
+            </div>
+            {{/if}}
+            {{#if instructional.length}}
+            <div>
+                <h5>Instructional Design</h5>
+
+                {{#each instructional }}
+                <li>
+                    <a class="{{#if new}}new{{/if}}" href="blog/{{ path }}">{{ title }}</a>
+                </li>
+                {{/each}}
+            </div>
+            {{/if}}
+        </div>
+
+
+    </section>
+</article>
+
+<!-- inject:js -->
+<!-- endinject -->
+</body>
+</html>
