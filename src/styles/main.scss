@@ -69,7 +69,7 @@ article {
     margin-top: 40px;
   }
 
-  p {
+  p, ul, ol, li, blockquote {
     line-height: 1.5;
     font-size: 18px;
     color: #4D4D4D;
@@ -84,7 +84,7 @@ article.content {
   width: 70%;
   overflow: hidden;
   min-height: 500px;
-  p {
+  p, ul, ol, li, blockquote {
     font-size: 15px;
   }
 }

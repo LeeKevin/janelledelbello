@@ -35,9 +35,10 @@ var collectionTypes = config.collections ? config.collections.reduce(function (t
     }, {}) : [];
 delete config.collections;
 
-function copyFonts() {
+function copyMisc() {
     copy('./node_modules/font-awesome/fonts/**/*', './dist/fonts');
     copy('./src/fonts/**/*', './dist/fonts');
+    copy('./CNAME', './dist');
 }
 
 gulp.task('watch', ['build', 'extra', 'images'], function () {
@@ -47,7 +48,7 @@ gulp.task('watch', ['build', 'extra', 'images'], function () {
 });
 
 gulp.task('build', ['run', 'extra', 'images'], function () {
-    copyFonts();
+    copyMisc();
 });
 
 gulp.task('images', function () {
