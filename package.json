@@ -11,8 +11,10 @@
   "dependencies": {
     "async": "^2.2.0",
     "babel-preset-es2015": "^6.18.0",
+    "bluebird": "^3.5.0",
     "extend": "^3.0.0",
     "font-awesome": "^4.7.0",
+    "fs-readdir-recursive": "^1.0.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-clean-css": "^3.0.4",
@@ -25,6 +27,7 @@
     "gulpsmith": "^0.5.5",
     "handlebars": "^4.0.6",
     "lodash": "^4.17.4",
+    "lodash.omit": "^4.5.0",
     "metalsmith": "^2.3.0",
     "metalsmith-collections": "^0.9.0",
     "metalsmith-markdown": "^0.2.1",
