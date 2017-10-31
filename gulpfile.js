@@ -280,14 +280,17 @@ gulp.task('pages', ['articles'], function () {
     )
 });
 
-gulp.task('run', ['pages'], function () {
+gulp.task('run', ['clean', 'pages'], function () {
+    return null
+});
+
+gulp.task('clean', function() {
     globby(['dist/*', '!dist/.git'])
         .then(function then(paths) {
             paths.map(function map(item) {
                 rimraf.sync(item);
             });
         });
-    return null
 });
 
 function copy(origin, dest) {
