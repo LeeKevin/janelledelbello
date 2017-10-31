@@ -5,7 +5,7 @@ collection: portfolio
 new: true
 portfolioTitle: "Principles of Good Design"
 portfolioDescription: "Cognitivist lesson using the C.R.A.P. principles"
-portfolioImage: "images/principles.png"
+portfolioColor: "#63ADF2"
 ---
 
 ![Principles of Design Screenshot](/images/principles-splash.png)

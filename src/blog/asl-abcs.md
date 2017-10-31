@@ -5,7 +5,7 @@ collection: portfolio
 new: true
 portfolioTitle: "Learning the ASL ABCs"
 portfolioDescription: "Behavioral"
-portfolioImage: "images/asl-alphabet.png"
+portfolioColor: "#8EDEBD"
 ---
 
 ![ASL ABCS Screenshot](/images/asl-splash.png)

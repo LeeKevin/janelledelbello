@@ -5,7 +5,7 @@ collection: portfolio
 new: false
 portfolioTitle: "Le Café Français"
 portfolioDescription: "Basic French lessons using gamification"
-portfolioImage: "images/france.png"
+portfolioColor: "#E75A7C"
 ---
 
 ![Le Café Français Screenshot](/images/frenchcafe-splash.png)

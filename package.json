@@ -3,10 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "npm run clean && gulp build",
-    "watch": "npm run clean && gulp watch",
-    "clean": "rimraf ./dist",
-    "dev": "npm run clean && concurrently \"gulp watch\" \"node server.js\""
+    "build": "gulp build",
+    "watch": "gulp watch",
+    "dev": "concurrently \"gulp watch\" \"node server.js\""
   },
   "dependencies": {
     "async": "^2.2.0",
@@ -15,6 +14,7 @@
     "extend": "^3.0.0",
     "font-awesome": "^4.7.0",
     "fs-readdir-recursive": "^1.0.0",
+    "globby": "^6.1.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-clean-css": "^3.0.4",

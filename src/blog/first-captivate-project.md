@@ -5,7 +5,7 @@ collection: portfolio
 new: false
 portfolioTitle: "D2L Essentials"
 portfolioDescription: "LMS lessons for university instructors"
-portfolioImage: "images/d2l.png"
+portfolioColor: "#B47EB3"
 ---
 
 ![D2L Lesson Screenshot](/images/d2l-splash.png)

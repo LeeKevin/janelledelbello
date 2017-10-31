@@ -5,6 +5,8 @@ var cleanCSS = require('gulp-clean-css');
 var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
 var rev = require('gulp-rev');
+var globby = require('globby');
+var rimraf = require('rimraf');
 
 var gulpsmith = require('gulpsmith');
 var metalsmith = require('metalsmith');
@@ -48,6 +50,13 @@ gulp.task('watch', ['build', 'extra', 'images'], function () {
 });
 
 gulp.task('build', ['run', 'extra', 'images'], function () {
+    globby(['dist/*', '!dist/.git'])
+        .then(function then(paths) {
+            paths.map(function map(item) {
+                rimraf.sync(item);
+            });
+        });
+
     copyMisc();
 });
 
