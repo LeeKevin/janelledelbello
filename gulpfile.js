@@ -50,13 +50,6 @@ gulp.task('watch', ['build', 'extra', 'images'], function () {
 });
 
 gulp.task('build', ['run', 'extra', 'images'], function () {
-    globby(['dist/*', '!dist/.git'])
-        .then(function then(paths) {
-            paths.map(function map(item) {
-                rimraf.sync(item);
-            });
-        });
-
     copyMisc();
 });
 
@@ -288,6 +281,12 @@ gulp.task('pages', ['articles'], function () {
 });
 
 gulp.task('run', ['pages'], function () {
+    globby(['dist/*', '!dist/.git'])
+        .then(function then(paths) {
+            paths.map(function map(item) {
+                rimraf.sync(item);
+            });
+        });
     return null
 });
 
