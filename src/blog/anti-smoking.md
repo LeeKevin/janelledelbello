@@ -1,10 +1,10 @@
 ---
-title: Sports Infographic Using A Selection
-date: 2017-11-31
+title: "Public Health Poster: Anti-Smoking"
+date: 2017-12-03
 collection: portfolio
 new: true
-portfolioTitle: "Sports Infographic"
-portfolioColor: "#8EDEBD"
+portfolioTitle: "Public Health Poster"
+portfolioColor: "#6A3937"
 ---
 
-[![Timeline](/images/portfolio/2-SportsInfo.jpg)](/images/portfolio/2-SportsInfo.jpg)
+[![San Francisco Department of Public Health Anti-Smoking Poster](/images/portfolio/5-AntiSmoking.png)](/images/portfolio/5-AntiSmoking.png "San Francisco Department of Public Health Anti-Smoking Poster")

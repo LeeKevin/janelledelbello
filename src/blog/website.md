@@ -1,10 +1,16 @@
 ---
-title: Sports Infographic Using A Selection
-date: 2017-11-31
+title: "Instructional Website Redesign: Tufts OpenCourseware"
+date: 2017-12-05
 collection: portfolio
 new: true
-portfolioTitle: "Sports Infographic"
-portfolioColor: "#8EDEBD"
+portfolioTitle: "Instructional Website Redesign"
+portfolioColor: "#A1CDF4"
 ---
-
-[![Timeline](/images/portfolio/2-SportsInfo.jpg)](/images/portfolio/2-SportsInfo.jpg)
+<div style="display: flex; padding: 8px; background: #e7e7e7;">
+<div style="margin-right: 8px;">
+[![Page 1](/images/portfolio/7-Website1.png)](/images/portfolio/7-Website1.png "Page 1")
+</div>
+<div>
+[![Page 2](/images/portfolio/7-Website2.png)](/images/portfolio/7-Website2.png "Page 2")
+</div>
+</div>

@@ -4,7 +4,7 @@ date: 2017-12-02
 collection: portfolio
 new: true
 portfolioTitle: "Using The Pen Tool"
-portfolioColor: "#8EDEBD"
+portfolioColor: "#E5C1BD"
 ---
 
-[![Timeline](/images/portfolio/4-InstrutionalGraphic.png)](/images/portfolio/4-InstrutionalGraphic.png)
+[![How To Make Hot Chocolate](/images/portfolio/4-InstructionalGraphic.png)](/images/portfolio/4-InstructionalGraphic.png "How To Make Hot Chocolate")

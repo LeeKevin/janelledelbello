@@ -4,7 +4,7 @@ date: 2017-11-31
 collection: portfolio
 new: true
 portfolioTitle: "Sports Infographic"
-portfolioColor: "#8EDEBD"
+portfolioColor: "#A657AE"
 ---
 
-[![Timeline](/images/portfolio/2-SportsInfo.jpg)](/images/portfolio/2-SportsInfo.jpg)
+[![Sports Infographic: Bow Pose](/images/portfolio/2-SportsInfo.jpg)](/images/portfolio/2-SportsInfo.jpg "Sports Infographic: Bow Pose")

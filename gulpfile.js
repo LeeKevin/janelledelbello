@@ -27,8 +27,10 @@ var collectionTypes = config.collections ? config.collections.reduce(function (t
         coll[c] = {
             sortBy: 'date',
             reverse: true,
-            limit: 5
         };
+        if (c !== 'portfolio') {
+            coll[c].limit = 5;
+        }
 
         return Object.assign(
             types,
