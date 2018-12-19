@@ -2,7 +2,6 @@
 title: "Tufts OpenCourseware App"
 date: 2017-12-06
 collection: portfolio
-new: true
 portfolioTitle: "Tufts OpenCourseware App"
 portfolioColor: "#E49273"
 ---

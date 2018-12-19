@@ -2,7 +2,6 @@
 title: "Simple Shapes Icons: Cacti"
 date: 2017-12-01
 collection: portfolio
-new: true
 portfolioTitle: "Simple Shapes Icons"
 portfolioColor: "#7DD181"
 ---

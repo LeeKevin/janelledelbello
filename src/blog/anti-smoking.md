@@ -2,7 +2,6 @@
 title: "Public Health Poster: Anti-Smoking"
 date: 2017-12-03
 collection: portfolio
-new: true
 portfolioTitle: "Public Health Poster"
 portfolioColor: "#6A3937"
 ---

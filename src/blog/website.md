@@ -2,7 +2,6 @@
 title: "Instructional Website Redesign: Tufts OpenCourseware"
 date: 2017-12-05
 collection: portfolio
-new: true
 portfolioTitle: "Instructional Website Redesign"
 portfolioColor: "#A1CDF4"
 ---
