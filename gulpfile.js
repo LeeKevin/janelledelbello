@@ -93,14 +93,14 @@ gulp.task('templates', function () {
 
                 return file;
             })),
-        gulp
-            .src('./src/layouts/blog.html')
-            .pipe(inject(cssStream, { ignorePath: 'dist/', addRootSlash: true }))
-            .pipe(intercept(function (file) {
-                blogTemplate = file.contents.toString();
-
-                return file;
-            })),
+        // gulp
+        //     .src('./src/layouts/blog.html')
+        //     .pipe(inject(cssStream, { ignorePath: 'dist/', addRootSlash: true }))
+        //     .pipe(intercept(function (file) {
+        //         blogTemplate = file.contents.toString();
+        //
+        //         return file;
+        //     })),
         gulp
             .src('./src/layouts/article.html')
             .pipe(inject(cssStream, { ignorePath: 'dist/', addRootSlash: true }))
@@ -201,59 +201,59 @@ gulp.task('pages', ['articles'], function () {
                     }))
             )
             .pipe(gulp.dest('./dist')),
-        gulp
-            .src('./src/pages/blog.md')
-            .pipe(
-                gulpsmith()
-                    .metadata(metadata)
-                    .use(markdown())
-                    .use(permalinks({
-                        relative: false,
-                        pattern: ':title'
-                    }))
-                    .use(function (files, metalsmith, done) {
-                        var blogIndex = files['blog/index.html'];
-                        var metadata = metalsmith.metadata();
-                        var articles = metadata.articles.slice(0);
-                        var paginateLimit = 10;
-
-                        blogIndex.pagination = {
-                            limit: paginateLimit,
-                            start: 0,
-                            prev: null,
-                            next: null,
-                        };
-
-                        var chain = [blogIndex];
-                        var position = 1;
-                        while (articles.slice(position * paginateLimit, position * (paginateLimit + 1)).length) {
-                            var prev = chain[position - 1];
-                            var next = Object.assign({}, blogIndex);
-                            next.pagination = Object.assign({}, next.pagination);
-
-                            next.pagination.start = position * paginateLimit;
-                            next.pagination.prev = prev;
-                            next.path = 'blog/page/' + (position + 1);
-                            next.page = position + 1;
-                            files[next.path + '/index.html'] = next;
-                            prev.pagination.next = next;
-
-                            chain.push(next);
-                            position++;
-                        }
-
-                        done();
-                    })
-                    .use(template({
-                        directory: './src/layouts',
-                        pattern: ["*/*/*/*html", "*/*/*html", "*/*html", "*html"],
-                        template: blogTemplate,
-                        partials: {
-                            bar: 'partials/blog-bar'
-                        }
-                    }))
-            )
-            .pipe(gulp.dest('./dist')),
+        // gulp
+        //     .src('./src/pages/blog.md')
+        //     .pipe(
+        //         gulpsmith()
+        //             .metadata(metadata)
+        //             .use(markdown())
+        //             .use(permalinks({
+        //                 relative: false,
+        //                 pattern: ':title'
+        //             }))
+        //             .use(function (files, metalsmith, done) {
+        //                 var blogIndex = files['blog/index.html'];
+        //                 var metadata = metalsmith.metadata();
+        //                 var articles = metadata.articles.slice(0);
+        //                 var paginateLimit = 10;
+        //
+        //                 blogIndex.pagination = {
+        //                     limit: paginateLimit,
+        //                     start: 0,
+        //                     prev: null,
+        //                     next: null,
+        //                 };
+        //
+        //                 var chain = [blogIndex];
+        //                 var position = 1;
+        //                 while (articles.slice(position * paginateLimit, position * (paginateLimit + 1)).length) {
+        //                     var prev = chain[position - 1];
+        //                     var next = Object.assign({}, blogIndex);
+        //                     next.pagination = Object.assign({}, next.pagination);
+        //
+        //                     next.pagination.start = position * paginateLimit;
+        //                     next.pagination.prev = prev;
+        //                     next.path = 'blog/page/' + (position + 1);
+        //                     next.page = position + 1;
+        //                     files[next.path + '/index.html'] = next;
+        //                     prev.pagination.next = next;
+        //
+        //                     chain.push(next);
+        //                     position++;
+        //                 }
+        //
+        //                 done();
+        //             })
+        //             .use(template({
+        //                 directory: './src/layouts',
+        //                 pattern: ["*/*/*/*html", "*/*/*html", "*/*html", "*html"],
+        //                 template: blogTemplate,
+        //                 partials: {
+        //                     bar: 'partials/blog-bar'
+        //                 }
+        //             }))
+        //     )
+        //     .pipe(gulp.dest('./dist')),
         gulp
             .src('./src/pages/index.md')
             .pipe(frontmatter())

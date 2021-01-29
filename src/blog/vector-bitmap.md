@@ -3,7 +3,7 @@ title: "Vector & Bitmap Infographic: Cactus Care"
 date: 2017-12-04
 collection: portfolio
 portfolioTitle: "Vector & Bitmap Infographic"
-portfolioColor: "#D6BA73"
+portfolioColor: "#FF8484"
 ---
 
 <div style="border-right: 0.75px solid #666;">

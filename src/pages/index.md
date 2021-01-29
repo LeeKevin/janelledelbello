@@ -6,4 +6,6 @@ I believe in making learning exciting, accessible and effective for diverse audi
  has taken me across the world--I’ve taught K-12 students from Alberta, Canada to South Korea! No matter where I go, 
  I carry with me a sense of adaptability, innovation, and creativity to build learning solutions.
  
-I’m currently completing a Master of Art in Education: Instructional Technologies at San Francisco State University and working as an instructional designer at [Intuitive](https://www.intuitive.com/).
+ I graduated with a Master of Arts in Education: Instructional Technologies at San Francisco State University.
+ 
+I’m currently working as an instructional designer at [Intuitive](https://www.intuitive.com/).

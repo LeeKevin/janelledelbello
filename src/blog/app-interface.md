@@ -3,7 +3,7 @@ title: "Tufts OpenCourseware App"
 date: 2017-12-06
 collection: portfolio
 portfolioTitle: "Tufts OpenCourseware App"
-portfolioColor: "#E49273"
+portfolioColor: "#FF5C5C"
 ---
 <div style="display: flex; padding: 8px; background: #e7e7e7;">
 <div style="margin-right: 8px;">

@@ -3,8 +3,7 @@ title: ASL ABCs
 date: 2017-09-19
 collection: portfolio
 portfolioTitle: "Learning the ASL ABCs"
-portfolioDescription: "Behavioral"
-portfolioColor: "#8EDEBD"
+portfolioColor: "#FFEBEB"
 ---
 
 ![ASL ABCS Screenshot](/images/asl-splash.png)

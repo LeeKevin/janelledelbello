@@ -26,6 +26,12 @@
   }
 }
 
+article {
+  a {
+    border-bottom: 1px solid $main-color;
+  }
+}
+
 @media(max-width: 770px),
 print {
   .articles-container {

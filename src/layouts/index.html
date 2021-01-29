@@ -20,47 +20,25 @@
         {{{contents}}}
     </section>
     <section>
-        <h4>Articles</h4>
+        <h4>Portfolio</h4>
 
-        <div class="articles-container">
-            <div>
-                <h5>Latest Articles</h5>
-
-                {{#if latest.length}}
-                {{#each latest }}
-                <li>
-                    <a class="{{#if new}}new{{/if}}" href="blog/{{ path }}">{{ title }}</a>
-                </li>
-                {{/each}}
-                {{else}}
-                None
+        <div id="portfolio-container">
+            {{#each portfolio}}
+            <figure style="background-color: {{#if portfolioColor}}{{portfolioColor}}{{else}}#c7c7c7{{/if}}">
+                {{#if portfolioImage}}
+                <img src="/{{portfolioImage}}"/>
                 {{/if}}
-            </div>
-            {{#if technical.length}}
-            <div>
-                <h5>Technical Writing</h5>
+                <figcaption>
+                    <h5>{{portfolioTitle}}</h5>
+                    <div class="portfolio-reveal">
+                        <p>{{portfolioDescription}}</p>
+                    </div>
+                </figcaption>
 
-                {{#each technical }}
-                <li>
-                    <a class="{{#if new}}new{{/if}}" href="blog/{{ path }}">{{ title }}</a>
-                </li>
-                {{/each}}
-            </div>
-            {{/if}}
-            {{#if instructional.length}}
-            <div>
-                <h5>Instructional Design</h5>
-
-                {{#each instructional }}
-                <li>
-                    <a class="{{#if new}}new{{/if}}" href="blog/{{ path }}">{{ title }}</a>
-                </li>
-                {{/each}}
-            </div>
-            {{/if}}
+                <a href="/blog/{{ path }}">View more</a>
+            </figure>
+            {{/each}}
         </div>
-
-
     </section>
 </article>
 
